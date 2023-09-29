@@ -1,0 +1,1 @@
+Conteúdo do site como um todo.

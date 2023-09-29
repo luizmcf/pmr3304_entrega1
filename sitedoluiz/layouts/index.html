@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ relURL "css/style.css" }}">
+    {{ partial "head.html" . }}
+</head>
+<body>
+    {{ partial "header.html" . }}
+    
+    <main>
+                <section class="recent-articles">
+            <h2>Artigos Recentes</h2>
+            <section class="articles" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                {{ range .Site.RegularPages }}
+                    {{ if eq .Section "posts" }}
+                        <article style="flex-basis: calc(40% - 20px); margin-bottom: 20px;">
+                            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            <p>{{ .Date.Format "2 de janeiro de 2006" }}</p>
+                            {{ .Summary }}
+                        </article>
+                    {{ end }}
+                {{ end }}
+            </section>
+        </section>
+    </main>
+    
+    {{ partial "footer.html" . }}
+</body>
+</html>

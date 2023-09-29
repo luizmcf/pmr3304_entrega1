@@ -1,0 +1,19 @@
+<header>
+    <link rel="stylesheet" href="{{ relURL "css/style.css" }}"> 
+    <img src="{{ relURL "images/logo.png" }}" alt="logo" class="logo">
+    <style>
+        .logo {
+            width: 300px; 
+            height: 200px; 
+        }
+    </style>
+    <h1>{{ .Site.Title }}</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ relURL "" }}">Home</a></li>
+            <li><a href="{{ relURL "about" }}">Sobre</a></li>
+            <li><a href="{{ relURL "tutorials" }}">Tutoriais</a></li>
+            <li><a href="{{ relURL "posts" }}">Todas postagens</a></li>
+        </ul>
+    </nav>
+</header>

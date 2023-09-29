@@ -1,0 +1,159 @@
+/* Reset de margens e preenchimentos para todos os elementos */
+html, body, div, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos globais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #50b7f3; /* Azul claro para o fundo */
+  color: #333;
+  line-height: 1.6;
+  text-align: center; /* Centraliza o texto no corpo (body) */
+}
+
+/* Header */
+header {
+  background-color: #50b7f3; /* Azul-escuro para o cabeçalho */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navegação */
+nav {
+  background-color: #0056b3; /* Azul mais escuro para a navegação */
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Main Content */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #00a2ff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex; /* Adiciona Flexbox para o layout */
+  flex-wrap: wrap; /* Permite que os artigos quebrem para a próxima linha */
+  justify-content: space-between; /* Distribui os elementos horizontalmente */
+  border-radius: 15px;
+  text-align: center; /* Centraliza o texto no artigo */
+  flex-basis: calc(100% - 20px);
+}
+
+article {
+  margin-bottom: 20px;
+  background-color: #fff; /* Cor de fundo do artigo */
+  padding: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  text-align: center; /* Centraliza o texto no artigo */
+  flex-basis: calc(50% - 20px); /* Ocupa metade da largura e ajusta a margem para centralizar */
+  margin-right: 20px; /* Adiciona espaço entre os artigos */
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #0056b3; /* Azul-escuro para o rodapé */
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Links */
+a {
+  color: #007BFF; /* Azul-escuro para links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Botões */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  /* Modifique o estilo da navegação para dispositivos menores, como uma barra de menu móvel */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajuste conforme necessário */
+    left: 0;
+    width: 100%;
+    background-color: #0056b3; /* Cor de fundo para o menu móvel */
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0;
+    padding: 10px;
+  }
+
+  nav a {
+    color: #fff;
+    text-align: center;
+  }
+
+  /* Adicione um ícone de menu para abrir e fechar a barra de navegação em telas menores */
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Oculte o logotipo em telas menores, se necessário */
+  .logo {
+    display: none;
+  }
+
+  /* Modifique estilos de artigos para tornar o conteúdo mais legível em telas menores */
+  article {
+    padding: 10px;
+    box-shadow: none; /* Remova sombras em dispositivos menores, se desejado */
+    text-align: left; /* Alinhe o texto à esquerda em telas menores */
+    flex-basis: calc(50% - 20px); /* Ocupa metade da largura e ajusta a margem para centralizar */
+    margin-right: 20px; /* Adiciona espaço entre os artigos */
+    margin-bottom: 20px;
+  }
+}
